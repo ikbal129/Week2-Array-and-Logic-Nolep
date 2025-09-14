@@ -3,14 +3,12 @@ function tentukanDeretGeometri(arr) {
    let b = arr[1] / arr[0];
     for (let i = 1; i < arr.length - 1; i++) {
        let selisih = arr[i + 1] / arr[i];
-       if (b == selisih) {
-          hasil = true;
-       } else {
-          hasil = false;
+       if (b != selisih) {
+          return false;
        }
     }
     
-    return hasil;
+    return true;
 }
 
 // TEST CASES
